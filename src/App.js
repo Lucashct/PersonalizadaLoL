@@ -6,6 +6,7 @@ import axios from 'axios';
 import { weights } from './consts';
 import { balanceTeams } from './util';
 
+
 function App() {
   const [ searchPlayer, setSearchPlayer ] = useState({});
   const [ summoner, setSummoner ] = useState({});
@@ -81,8 +82,8 @@ function App() {
   
   async function getSummoner(nickName) {
     try {
-      const summonerResponse = await axios.get(REQUEST_SUMMONER + `${nickName}?api_key=` + API_RIOT_KEY);
-      const rankResponse = await axios.get(REQUEST_RANK_SUMMONER + `${summonerResponse.data.id}?api_key=` + API_RIOT_KEY)
+      const summonerResponse = await axios.get(REQUEST_SUMMONER + `${nickName}?api_key=` + process.env.REACT_APP_API_RIOT_KEY);
+      const rankResponse = await axios.get(REQUEST_RANK_SUMMONER + `${summonerResponse.data.id}?api_key=` + process.env.REACT_APP_API_RIOT_KEY)
   
       const ranksArray = filterRanks(rankResponse.data);
   

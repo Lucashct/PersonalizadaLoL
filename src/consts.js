@@ -28,5 +28,4 @@ export const weights = [
     { rank: 'DESAFIANTE', weight: 27 }
 ]
 
-export const API_RIOT_KEY = 'RGAPI-34262a25-656a-4fe9-87ac-2d16cb0668f2';
 export const LINK_ICONS = 'http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/';
