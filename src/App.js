@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import { REQUEST_RANK_SUMMONER, REQUEST_SUMMONER } from "./urls"
-import { API_RIOT_KEY } from "./consts";
 import axios from 'axios';
 import { weights } from './consts';
 import { balanceTeams } from './util';
