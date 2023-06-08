@@ -1,38 +1,137 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #3A9DFB;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-player-container {
+  margin: 30px 30px 15px 30px;
+}
+
+.list-of-players {
+  width: 17rem;
+  height: 73vh;
+  border: 0px solid black;
+  background-color: rgba(248, 248, 248, 1);
+  border-radius: 15px;
+  margin: 0px 0px 0px 20px;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.lat-menu {
+  width: 20rem;
+  height: 100%;
+  border-right: 2px solid #F3F3F3;
+  background-color: #032756;
+}
+
+.player-container {
+  width: 15rem;
+  height: 2rem;
+  margin: 0px 0px 0px 45px;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-image {
+  width: 40px;
+  height: 40px;
+}
+
+.infos-player {
+  margin: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.infos-player-list {
+  margin: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: row;
+  color: black;
+}
+
+.icon-image-list {
+  width: 20px;
+  height: 20px;
+}
+
+.player-container-list {
+  width: 15rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.elo {
+  margin: 5px 0px 10px 5px;
+}
+
+.result-sort {
+  /*border: 1px solid black;*/
+  width: 75vw;
+  height: 90vh;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.first-team {
+  width: 17rem;
+  height: 73vh;
+  border: 0px solid black;
+  background-color: rgba(248, 248, 248, 1);
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.seccond-team {
+  width: 17rem;
+  height: 73vh;
+  border: 0px solid black;
+  background-color: rgba(248, 248, 248, 1);
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.buttonRemove {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 0px;
+  margin: 1px 0px 0px 5px;
+  color: red;
+}
+
+.ul-list {
+ 
+  width: 17vw;
+  height: 72vh;
 }
