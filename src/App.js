@@ -147,49 +147,53 @@ function App() {
               })}
             </ul>
           </div>
+          <span style={{ color:'whiteSmoke', marginLeft:'10%', fontSize: '10px' }}>{`${listOfPlayers.length} ${listOfPlayers.length === 1 ? 'jogador' : 'jogadores'}
+          ${listOfPlayers.length === 1 ? 'adicionado' : 'adicionados'}`}</span>
         </div>
+        <div style={{ display: 'flex', flexDirection:'column', textAlign:'center' }}>
+          <h1>Personalizada Feijuca</h1>
+          <div className='result-sort'>
+            <div className='first-team'>
+              <label>Time 1</label>
 
-        <div className='result-sort'>
-          <div className='first-team'>
-            <label style={{ margin: '10px 0px 0px 110px' }}>Time 1</label>
-
-            <ul>
-              {firstTeam.map(item => {
-                return(
-                  <li key={item.encryptedId}>
-                    <div className='player-container-list'>
-                      <img alt='icon-player-list' className='icon-image-list' src={`http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/${item.profileIconId}.png`}></img>
-                      <div className='infos-player-list'>
-                        <span>{item.nickName}</span>
-                        <span style={{fontSize:'10px'}} className='elo'> {item.elo.replace('_', ' ')} </span>
+              <ul>
+                {firstTeam.map(item => {
+                  return(
+                    <li key={item.encryptedId}>
+                      <div className='player-container-list'>
+                        <img alt='icon-player-list' className='icon-image-list' src={`http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/${item.profileIconId}.png`}></img>
+                        <div className='infos-player-list'>
+                          <span>{item.nickName}</span>
+                          <span style={{fontSize:'10px'}} className='elo'> {item.elo.replace('_', ' ')} </span>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
 
-          <button onClick={() => sortTeams(listOfPlayers)} style={{ height: '50px', marginTop: '25%' }}>Sortear</button>
-          
-          <div className='seccond-team'>
-            <label style={{ margin: '10px 0px 0px 110px' }}>Time 2</label>
+            <button onClick={() => sortTeams(listOfPlayers)} style={{ height: '50px', marginTop: '25%' }}>Sortear</button>
+            
+            <div className='seccond-team'>
+              <label>Time 2</label>
 
-            <ul>
-              {seccondTeam.map(item => {
-                return(
-                  <li key={item.encryptedId}>
-                    <div className='player-container-list'>
-                      <img alt='icon-player-list' className='icon-image-list' src={`http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/${item.profileIconId}.png`}></img>
-                      <div className='infos-player-list'>
-                        <span>{item.nickName}</span>
-                        <span style={{fontSize:'10px'}} className='elo'> {item.elo.replace('_', ' ')} </span>
+              <ul>
+                {seccondTeam.map(item => {
+                  return(
+                    <li key={item.encryptedId}>
+                      <div className='player-container-list'>
+                        <img alt='icon-player-list' className='icon-image-list' src={`http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/${item.profileIconId}.png`}></img>
+                        <div className='infos-player-list'>
+                          <span>{item.nickName}</span>
+                          <span style={{fontSize:'10px'}} className='elo'> {item.elo.replace('_', ' ')} </span>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                )
-              })}
-            </ul>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
