@@ -83,7 +83,12 @@ function App() {
     try {
       const summonerResponse = await axios.get(REQUEST_SUMMONER + `${nickName}?api_key=` + process.env.REACT_APP_API_RIOT_KEY);
       const rankResponse = await axios.get(REQUEST_RANK_SUMMONER + `${summonerResponse.data.id}?api_key=` + process.env.REACT_APP_API_RIOT_KEY)
-  
+      
+      if(rankResponse.data.length < 1) {
+        alert('Ranks da conta não foram encontrados');
+        return;
+      } 
+
       const ranksArray = filterRanks(rankResponse.data);
   
       const constructedSummuner = {
